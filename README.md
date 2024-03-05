@@ -15,7 +15,7 @@ A leitura é feita por meio do script `ler_dados.py`. Existem algumas funções 
 
 O script `plotar_colunas_ventos.py` realiza a plotagem das 7 camadas dos ventos para ambas as componentes.
 
-##Dependências
+## Dependências
 
 Para executar os scripts acima, será necessário instalar algumas bibliotecas Python. Isso pode ser feito com o seguinte comando:
 
