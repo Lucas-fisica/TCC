@@ -1,79 +1,22 @@
-# TCC
+# Identificação da Onda Planetária de 2 dias - TCC
 
-# Uso das Funções do aruivo control.py
+## Análise Harmônica
 
-Este arquivo README fornece uma explicação sobre o uso de cada função no script Python fornecido.
+O arquivo `amp.py` realiza a análise harmônica e gera imagens contendo as amplitudes das ondas. No caso específico, ele foi configurado para trabalhar com a onda de 2 dias. A modificação pode ser feita dentro do arquivo control.py, bastando especificar o período a ser trabalhado.
 
-## Funcões e Descrições
+## Espectro de Potência
 
-### func_seno(tempo)
+O espectro de potência foi calculado por meio do arquivo `grafico_ondaletas.py`. Para alterar quais períodos devem ser visualizados nos gráficos, é necessário ajustar os parâmetros relativos à análise de wavelet. Por padrão, ela foi configurada para trabalhar com dados horários `dt`.
 
-Esta função calcula a função seno para um dado tempo.
+## Leitura dos Dados de Ventos
+A leitura é feita por meio do script `ler_dados.py`. Existem algumas funções relacionadas à leitura dos dados, como, por exemplo, a obtenção dos dados horários e o cálculo da média diária. O script pega os dados de ventos e já os formata em um DataFrame para facilitar o processo de manipulação. Por padrão, ele selecionará as 8 primeiras colunas dos dados.
 
-**Parâmetros:**
-- tempo: Um array ou lista contendo valores de tempo.
+##Gráficos das 7 Camadas dos Ventos
 
-**Resultado Esperado:**
-A função retornará um array ou lista com os valores da função seno correspondentes ao tempo fornecido.
+O script `plotar_colunas_ventos.py` realiza a plotagem das 7 camadas dos ventos para ambas as componentes.
 
-### func_cosseno(tempo)
+##Dependências
 
-Esta função calcula a função cosseno para um dado tempo.
+Para executar os scripts acima, será necessário instalar algumas bibliotecas Python. Isso pode ser feito com o seguinte comando:
 
-**Parâmetros:**
-- tempo: Um array ou lista contendo valores de tempo.
-
-**Resultado Esperado:**
-A função retornará um array ou lista com os valores da função cosseno correspondentes ao tempo fornecido.
-
-### ajuste(tempo, A, B)
-
-Esta função realiza um ajuste de curva utilizando uma combinação linear de seno e cosseno.
-
-**Parâmetros:**
-- tempo: Um array ou lista contendo valores de tempo.
-- A: Coeficiente que multiplica a função cosseno.
-- B: Coeficiente que multiplica a função seno.
-
-**Resultado Esperado:**
-A função retornará um array ou lista contendo os valores ajustados correspondentes ao tempo fornecido e aos coeficientes dados.
-
-### coeficientes(sinal, tempo, periodo)
-
-Esta função calcula os coeficientes de ajuste (A e B) e o coeficiente de correlação (R) para um sinal dado.
-
-**Parâmetros:**
-- sinal: Um array ou lista contendo os valores do sinal.
-- tempo: Um array ou lista contendo valores de tempo.
-- periodo: O período do sinal.
-
-**Resultado Esperado:**
-A função retornará os coeficientes A e B e o coeficiente de correlação R.
-
-### calc_amp(sinal, tempo, max_calc)
-
-Esta função calcula a amplitude de um sinal utilizando o método de ajuste de curva.
-
-**Parâmetros:**
-- sinal: Um array ou lista contendo os valores do sinal.
-- tempo: Um array ou lista contendo valores de tempo.
-- max_calc: O número máximo de cálculos permitidos.
-
-**Resultado Esperado:**
-A função retornará a amplitude do sinal.
-
-### janela_movel(sinal, tempo, periodo)
-
-Esta função cria janelas móveis e calcula os coeficientes de ajuste para cada janela.
-
-**Parâmetros:**
-- sinal: Um array ou lista contendo os valores do sinal.
-- tempo: Um array ou lista contendo valores de tempo.
-- periodo: O período do sinal.
-
-**Resultado Esperado:**
-A função retornará um DataFrame contendo os coeficientes A e B e o coeficiente de correlação R para cada janela móvel.
-
-## Como Usar
-
-Para utilizar essas funções, você precisa importar o script Python e chamar cada função conforme necessário, fornecendo os parâmetros corretos. Consulte a descrição de cada função para obter detalhes sobre os parâmetros necessários e os resultados esperados.
+```pip install -r requirements.txt```
