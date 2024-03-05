@@ -2,7 +2,7 @@
 
 ## Análise Harmônica
 
-O arquivo `amp.py` realiza a análise harmônica e gera imagens contendo as amplitudes das ondas. No caso específico, ele foi configurado para trabalhar com a onda de 2 dias. A modificação pode ser feita dentro do arquivo control.py, bastando especificar o período a ser trabalhado.
+O arquivo `amp.py` realiza a análise harmônica e gera imagens contendo as amplitudes das ondas. No caso específico, ele foi configurado para trabalhar com a onda de 2 dias. A modificação pode ser feita dentro do arquivo control.py, bastando especificar o período a ser trabalhado e o tamanho da janela.
 
 ## Espectro de Potência
 
