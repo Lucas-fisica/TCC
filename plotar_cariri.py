@@ -15,6 +15,7 @@ caminho = pt('ventos')
 arquivoscar = sorted([str(i) for i in caminho.glob('Cariri/**/mean*') if str(i).endswith('.mer') or str(i).endswith('.zon')])
 
 # Iteração sobre os arquivos do Cariri
+#Para plotar outras cidades, basta passar o caminho dentro de caminho.glob(''), supondo que os dados estejam dentro de caminho
 for cari in arquivoscar:
     # Obtendo os componentes do nome da cidade do arquivo
     nome_cariri_componente = ler.cidade_componentes(cari)
